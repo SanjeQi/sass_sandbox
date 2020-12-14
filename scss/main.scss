@@ -1,6 +1,13 @@
-$color: #333;
+@import 'variables'; // import the partial _variables.scss; partials are not compile to css
+
+* {
+  margin: 0;
+  padding: 0;
+}
 body {
-  background: $color;
-  color: white;
+  background: $dark-color;
+  color: $light-color;
   text-align: center;
+  font-family: $font-stack;
+  line-height: 1.5;
 }
