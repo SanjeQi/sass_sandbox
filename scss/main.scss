@@ -34,9 +34,40 @@ header {
   }
 }
 
-a {
+// Shared properties or Inheritance
+%btn-shared {
+  display: inline-block;
+  padding: 0.7rem;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  margin-top: 1rem;
+  border-radius: 5px;
+}
+//  Solution 1
+
+// .btn {
+//   &-light {
+//     @extend %btn-shared;
+//     background-color: $light-color;
+//     color: #333;
+//   }
+//   &-dark {
+//     @extend %btn-shared;
+//     background-color: $dark-color;
+//     color: #fff;
+//   }
+// }
+
+//  Solution 2
+.btn-light {
+  @extend %btn-shared;
+  background-color: $light-color;
   color: #333;
-  &:hover {
-    color: coral;
-  }
+}
+
+.btn-dark {
+  @extend %btn-shared;
+  background-color: $dark-color;
+  color: #fff;
 }
